@@ -130,44 +130,103 @@
       || శ్రీ భక్తకార్యకల్పదృమ గురుసార్వభౌమ శ్రీమద్రాజాధిరాజ యోగీమహారాజ త్రిభువనానంద అద్వైత అభేద నిరంజన నిర్గుణ నిరాలంబ పరిపూర్ణ సదోదిత సకలమతస్థాపిత శ్రీ సద్గురు మాణికప్రభు మహారాజ కీ జయ ||
     </div>
 
-    <div style="text-align: center; margin: 20px;">
-      <button class="blinking" onclick="document.getElementById('utsavModal').style.display='block'">
-        View 2025 Utsav Calendar
-      </button>
-    </div>
+  
+<!-- 🔶 ONE-BY-ONE SLIDER WITH WHITE BACKGROUND & MODALS -->
+<!-- <div id="templeSlider" style="width: 100%; text-align: center; margin: 30px 0;"> -->
+<div id="templeSlides" style="position: relative; max-width: 40%; margin: auto; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); padding: 20px;">
+  <div id="templeSlides" style="position: relative; max-width: 500px; margin: auto; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); padding: 20px;">
 
-    <div id="utsavModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); overflow:auto; z-index:9999;">
-      <div style="background:white; margin:5% auto; padding:20px; width:90%; max-width:800px; border-radius:10px; position:relative; font-size: 1.3em; line-height: 1.8; color: black;">
-        <span onclick="document.getElementById('utsavModal').style.display='none'" style="position:absolute; top:10px; right:20px; font-size:28px; cursor:pointer; color:red;">&times;</span>
-        <h3 style="color:maroon; text-align:center; font-size: 1.0em;">2025 Utsav Calendar</h3>
-        <p style="text-align:left;">
-       🌸 01.01.2025, Wed -Shri Nrusimha saraswathi jayanti<br>
-🌸 06.01.2025, Mon -Shri Shakambari Devi Navarathri<br>
-🌸 13.01.2025, Mon -Shri Shakambari Devi Pournami<br>
-🌸 21.01.2025, Tue -Shri Vivekananda Jayanti<br>
-🌸 31.01.2025, Fri -Shri Navanatha Jayanti<br>  
-🌸 11.02.2025, Tue -Shri Manik Prabhu Gadhi Sthapana, (Sadasivpet)<br>
-🌸 18.03.2025, Tue -Shri Marthanda Manik Prabhu Aaradhana, Gowlipura, Hyd.<br>
-🌸 20.03.2025, Thu -Shri Manik Prabhu Mandhir, Gowlipura, Hyd. (Dhindi)<br>
-🌸 24.05.2025, Fri -Shri Prabhudas Maharaj Jayanti (Krishnapur)<br>
-🌸 30.05.2025, Fri - Shri Prabhudas Maharaj Punyathithi (Krishnapur)<br>
-🌸 10.07.2025, Thu -Shri Manik Prabhu Gadhi Sthapana Divas (Chowdarguda)<br>
-🌸 21.08.2025, Thu - Vyankamma Devi Aaradhana (Prabhu Nagar)<br>
-🌸 10.09.2025, Wed -Shri Prabhudas Maharaj Mahalaya Paksh<br>
-🌸 13.10.2025, Mon -Shri Manohara Prabhu Aaradhana - Dhindi (Prabhu Nagar)<br>
-🌸 15.11.2025, Sat -Shri Manik Prabhu Deeksha Dharana (Prabhu Nagar)<br>
-🌸 01.12.2025, Mon -Shri Manik Prabhu Punyatithi (Prabhu Nagar)<br>
-🌸 04.12.2025, Thu -Shri Manik Prabhu Jayanti (Prabhu Nagar)<br>
-🌸 16.12.2025, Tue -Shri Marthanda Manik Prabhu Jayanti (Krishnapur)<br><br>
-
-      <strong>🌿 Dwadashi Dates (KRISHNAPUR)</strong><br>
-      26/Jan-Sun, 25/Feb-Tus, 15/Mar-Sat, 19/Apr-Sat, 24/May-Sat, 14/Jun-Sat, 12/Jul-Sat, 18/Aug-Mon, 13/Sep-Sat, 11/Oct-Sat, 08/Nov-Sat, 16/Dec-Tus<br><br>
-
-      <strong>🪔 Manasapooja Dates (Prabhu Nagar)</strong><br>
-Every Month Second Friday (10/Jan-Fri, 14/Feb-Fri, 14/Mar-Fri, 11/Apr-Fri, 09/May-Fri, 13/Jun-Fri, 11/JUl-Fri, 08/Aug-Fri, 12/Sep-Fri, 10/Oct-Fri, 14/Nov-Fri, 12/Dec-Fri)
-        </p>
+    <!-- Krishnapur Slide -->
+    <div class="templeSlide" style="display: block;">
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <img src="Krishnapur.png" alt="Krishnapur Temple" style="width: 30%; border-radius: 10px; cursor: pointer;" onclick="openModal('krishnapurModal')">
+        <div style="margin-top: 15px; font-size: 1.2em; font-weight: bold; color: maroon;text-align: center;">🕉️ Shri Datta Martand Mandir<br> 👉 CLICK ON </div>
       </div>
     </div>
+
+    <!-- Prabhu Nagar Slide -->
+    <div class="templeSlide" style="display: none;">
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <img src="prabhunagar.png" alt="Prabhu Nagar Temple" style="width: 30%; border-radius: 10px; cursor: pointer;" onclick="openModal('prabhunagarModal')">
+        <div style="margin-top: 15px; font-size: 1.2em; font-weight: bold; color: maroon;text-align: center;">🕉️ PRABHU NAGAR GADI<br> 👉 CLICK ON</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- 🔁 SLIDER SCRIPT (3s slide + ESC key) -->
+<script>
+  let slideIndex = 0;
+  let slideInterval;
+  const slides = document.getElementsByClassName("templeSlide");
+
+  function showSlides() {
+    for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
+    slideIndex = (slideIndex + 1) % slides.length;
+    slides[slideIndex].style.display = "block";
+  }
+
+  function startSlider() {
+    slideInterval = setInterval(showSlides, 3000); // 3 seconds
+  }
+
+  function stopSlider() {
+    clearInterval(slideInterval);
+  }
+
+  function openModal(id) {
+    stopSlider();
+    document.getElementById(id).style.display = 'block';
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).style.display = 'none';
+    startSlider(); // Resume slider
+  }
+
+  // Start slider on load
+  window.onload = startSlider;
+
+  // ESC key to close any open modal
+  window.addEventListener('keydown', function(e) {
+    if (e.key === "Escape") {
+      ['krishnapurModal', 'prabhunagarModal'].forEach(id => {
+        if (document.getElementById(id).style.display === 'block') {
+          closeModal(id);
+        }
+      });
+    }
+  });
+</script>
+
+<!-- 🔷 KRISHNAPUR MODAL -->
+<div id="krishnapurModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); overflow:auto; z-index:9999;">
+  <div style="background:white; margin:5% auto; padding:20px; width:90%; max-width:800px; border-radius:10px; position:relative; color:black;">
+    <span onclick="closeModal('krishnapurModal')" style="position:absolute; top:10px; right:20px; font-size:28px; cursor:pointer; color:red;">&times;</span>
+    <img src="Krishnapur.png" alt="Krishnapur Temple Full" style="width:100%; border-radius:10px; margin-bottom:15px;">
+    <h3 style="text-align:center; color:maroon;">Shri Datta Martand Mandir, Krishnapur</h3>
+    <p style="text-align:justify; font-size:1.1em;">
+    Shri Datta Martand Mandir, <br>Muktashram, Krishnapur,<br> Zahirabad, Sangareddy District, <br>Telangana, 502246.
+    </p>
+  </div>
+</div>
+
+<!-- 🔷 PRABHU NAGAR MODAL -->
+<div id="prabhunagarModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); overflow:auto; z-index:9999;">
+  <div style="background:white; margin:5% auto; padding:20px; width:90%; max-width:800px; border-radius:10px; position:relative; color:black;">
+    <span onclick="closeModal('prabhunagarModal')" style="position:absolute; top:10px; right:20px; font-size:28px; cursor:pointer; color:red;">&times;</span>
+    <img src="prabhunagar.png" alt="Prabhu Nagar Temple Full" style="width:100%; border-radius:10px; margin-bottom:15px;">
+    <h3 style="text-align:center; color:maroon;">Shri Manik Prabhu Mandir, Prabhu Nagar</h3>
+    <p style="text-align:justify; font-size:1.1em;">
+     Shri Manik Prabhu Gadhi was established at Nawapet in Vikarabad district of telangana on  12.11.1939 and the temple was constructed in 1948. The unswerving devotion of the devotees and the unwavering love of the people of the village for Prabhu has today made Nawabpet known as the  Prabhunagar. <br>
+On the occasion of <strong>Manikprabhu Jayanti in Margasira Shudha Ekadashi to Padyami</strong> of Hindu month regular pujas are performed, Hanuman procession, manikyaprabhu as well as Rakamcharla bhajans, cultural dances are also  performed which devotees enjoy, at <strong>Prabhu darbar </strong>held on concluding day which ends the fair at <strong>Sri Sadguru Manikprabhu Mandir </strong> in presence of <strong>Sarwotmukhyagi Sri Bal Matand Deshpande Maharaj.</strong> <br>
+Prabhunagar, Nawabpet Mandal
+    </p>
+  </div>
+</div>
+<!-...................Sliding closing point calender ending point coding -->
+
 
     <div class="h2-box">
       <marquee direction="left" scrollamount="5">
@@ -211,38 +270,11 @@ Every Month Second Friday (10/Jan-Fri, 14/Feb-Fri, 14/Mar-Fri, 11/Apr-Fri, 09/Ma
 
       <!-...................- END OF MANIK PRABHU SEC -->
 
-      <!-- Krishnapur -->
-     
-<div style="display: flex; flex-wrap: wrap; background-color: #fff; color: #000; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); padding: 15px; margin-bottom: 30px;">
-  <div style="flex: 1 1 250px; max-width: 300px; margin-right: 20px;">
-    <img src="Krishnapur.png" alt="Shri Datta Martand Mandir" style="width: 100%; border-radius: 10px;">
+      
+    </div>
   </div>
-  <div style="flex: 2 1 300px;">
-    <h3 style="text-align: CENTER;text-decoration: underline;">Shri Datta Martand Mandir</h3>
-    <p style="text-align: CENTER;">
-      Shri Datta Martand Mandir, Muktashram, Krishnapur, Zahirabad, Sangareddy District, Telangana, 502246.
-    </p>
-  </div>
-</div>
-
-      <!--------------------------- END OF Krishnapur -->
-
-     <div style="display: flex; flex-wrap: wrap; background-color: #fff; color: #000; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); padding: 15px; margin-bottom: 30px;">
-  <div style="flex: 1 1 250px; max-width: 300px; margin-right: 20px;">
-    <img src="prabhunagar.png" alt="Shri Manik Prabhu Mandir" style="width: 100%; border-radius: 10px;">
-  </div>
-  <div style="flex: 2 1 300px;">
-    <h3 style="text-align: CENTER; text-decoration: underline;">Shri Manik Prabhu Mandir, Prabhu Nagar</h3>
-       <p style="text-align: justify;">
-Shri Manik Prabhu Gadhi was established at Nawapet in Vikarabad district of telangana on  12.11.1939 and the temple was constructed in 1948. The unswerving devotion of the devotees and the unwavering love of the people of the village for Prabhu has today made Nawabpet known as the  Prabhunagar. <br>
-On the occasion of <strong>Manikprabhu Jayanti in Margasira Shudha Ekadashi to Padyami</strong> of Hindu month regular pujas are performed, Hanuman procession, manikyaprabhu as well as Rakamcharla bhajans, cultural dances are also  performed which devotees enjoy, at <strong>Prabhu darbar </strong>held on concluding day which ends the fair at <strong>Sri Sadguru Manikprabhu Mandir </strong> in presence of <strong>Sarwotmukhyagi Sri Bal Matand Deshpande Maharaj.</strong> <br>
-Prabhunagar, Nawabpet Mandal<br>
-Vikarabad District<br>
-
-TELANGANA.
-    </p>    
-  </div>
-</div>
+</body>
+</html>
 
 
      <!-- ----------------END OF PRABHU NAGAR -->
