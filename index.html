@@ -140,7 +140,7 @@
     <div class="templeSlide" style="display: block;">
       <div style="display: flex; flex-direction: column; align-items: center;">
         <img src="Krishnapur.png" alt="Krishnapur Temple" style="width: 30%; border-radius: 10px; cursor: pointer;" onclick="openModal('krishnapurModal')">
-        <div style="margin-top: 15px; font-size: 1.2em; font-weight: bold; color: maroon;text-align: center;">🕉️ Shri Datta Martand Mandir<br> 👉 CLICK ON </div>
+        <div style="margin-top: 15px; font-size: 1.2em; font-weight: bold; color: maroon;text-align: center;">🕉️ Shri Datta Martand Mandir<br> 👆 CLICK ON IMAGE </div>
       </div>
     </div>
 
@@ -148,14 +148,14 @@
     <div class="templeSlide" style="display: none;">
       <div style="display: flex; flex-direction: column; align-items: center;">
         <img src="prabhunagar.png" alt="Prabhu Nagar Temple" style="width: 30%; border-radius: 10px; cursor: pointer;" onclick="openModal('prabhunagarModal')">
-        <div style="margin-top: 15px; font-size: 1.2em; font-weight: bold; color: maroon;text-align: center;">🕉️ PRABHU NAGAR GADI<br> 👉 CLICK ON</div>
+        <div style="margin-top: 15px; font-size: 1.2em; font-weight: bold; color: maroon;text-align: center;">🕉️ PRABHU NAGAR GADI<br> 👆 CLICK ON IMAGE </div>
       </div>
     </div>
 
   </div>
 </div>
 
-<!-- 🔁 SLIDER SCRIPT (3s slide + ESC key) -->
+<!-- 🔁 SLIDER SCRIPT (2s slide + ESC key) -->
 <script>
   let slideIndex = 0;
   let slideInterval;
@@ -168,7 +168,7 @@
   }
 
   function startSlider() {
-    slideInterval = setInterval(showSlides, 3000); // 3 seconds
+    slideInterval = setInterval(showSlides, 3000); // 2 seconds
   }
 
   function stopSlider() {
