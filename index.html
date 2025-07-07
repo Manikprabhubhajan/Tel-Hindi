@@ -133,8 +133,8 @@
   
 <!-- 🔶 ONE-BY-ONE SLIDER WITH WHITE BACKGROUND & MODALS -->
 <!-- <div id="templeSlider" style="width: 100%; text-align: center; margin: 30px 0;"> -->
-<div id="templeSlides" style="position: relative; max-width: 90%; margin: auto; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); padding: 20px;">
-  <div id="templeSlides" style="position: relative; max-width: 90%; margin: auto; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); padding: 20px;">
+<div id="templeSlides" style="position: relative; max-width: 500px; margin: auto; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); padding: 20px;">
+
 
     <!-- Krishnapur Slide -->
     <div class="templeSlide" style="display: block;">
@@ -152,10 +152,13 @@
       </div>
     </div>
 
-  </div>
+  <!-- Left/Right Arrows INSIDE templeSlides -->
+  <button onclick="changeSlide(-1)" style="position:absolute; top:50%; left:-20px; transform:translateY(-50%); background:rgba(0,0,0,0.5); color:white; border:none; border-radius:50%; font-size:22px; width:40px; height:40px; cursor:pointer;">&#10094;</button>
+
+  <button onclick="changeSlide(1)" style="position:absolute; top:50%; right:-20px; transform:translateY(-50%); background:rgba(0,0,0,0.5); color:white; border:none; border-radius:50%; font-size:22px; width:40px; height:40px; cursor:pointer;">&#10095;</button>
 </div>
 
-<!-- 🔁 SLIDER SCRIPT (2s slide + ESC key) -->
+<!-- 🔁 SLIDER SCRIPT (Updated to support manual slide change) -->
 <script>
   let slideIndex = 0;
   let slideInterval;
@@ -168,11 +171,18 @@
   }
 
   function startSlider() {
-    slideInterval = setInterval(showSlides, 3000); // 2 seconds
+    slideInterval = setInterval(showSlides, 3000);
   }
 
   function stopSlider() {
     clearInterval(slideInterval);
+  }
+
+  function changeSlide(n) {
+    stopSlider();
+    slides[slideIndex].style.display = "none";
+    slideIndex = (slideIndex + n + slides.length) % slides.length;
+    slides[slideIndex].style.display = "block";
   }
 
   function openModal(id) {
@@ -182,16 +192,14 @@
 
   function closeModal(id) {
     document.getElementById(id).style.display = 'none';
-    startSlider(); // Resume slider
+    startSlider();
   }
 
-  // Start slider on load
   window.onload = startSlider;
 
-  // ESC key to close any open modal
   window.addEventListener('keydown', function(e) {
     if (e.key === "Escape") {
-      ['krishnapurModal', 'prabhunagarModal'].forEach(id => {
+      ['krishnapurModal','ProgramModal','prabhunagarModal'].forEach(id => {
         if (document.getElementById(id).style.display === 'block') {
           closeModal(id);
         }
