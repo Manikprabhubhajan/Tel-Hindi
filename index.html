@@ -120,6 +120,24 @@
         width: 150px;
       }
     }
+ 
+<! Blinking for telug & hindi one by one -->
+ @keyframes blinkBg {
+  0%, 49% { background-color: white; }
+  50%, 100% { background-color: yellow; }
+}
+
+.blink-hindi {
+  animation: blinkBg 2s infinite;
+}
+
+.blink-telugu {
+  animation: blinkBg 2s infinite;
+  animation-delay: 1s;
+}
+
+<! Blinking for telug & hindi one by closing section -->
+
   </style>
 </head>
 <body>
@@ -131,6 +149,25 @@
       || శ్రీ భక్తకార్యకల్పదృమ గురుసార్వభౌమ శ్రీమద్రాజాధిరాజ యోగీమహారాజ త్రిభువనానంద అద్వైత అభేద నిరంజన నిర్గుణ నిరాలంబ పరిపూర్ణ సదోదిత సకలమతస్థాపిత శ్రీ సద్గురు మాణికప్రభు మహారాజ కీ జయ ||
     </div>
 
+    <div class="h2-box">
+      <marquee direction="left" scrollamount="5">
+        Click Link for "తెలుగు & हिन्दी" Bhajan Given below
+      </marquee>
+    </div>
+
+    <!-- 🔔 Blinking Links -->
+    <ul>
+      <li>
+        <a class="blink-hindi" href="https://manikprabhubhajan.github.io/HINDI/" target="_blank">
+          👉 1. हिंदी पद 
+        </a>
+      </li>
+      <li>
+        <a class="blink-telugu" href="https://manikprabhubhajan.github.io/TELUGUBHAJAN/" target="_blank">
+          👉 2. తెలుగు భజనలు
+        </a>
+      </li>
+    </ul>
   
 <!-- 🔶 ONE-BY-ONE SLIDER WITH WHITE BACKGROUND & MODALS -->
 <!-- <div id="templeSlider" style="width: 100%; text-align: center; margin: 30px 0;"> -->
@@ -241,19 +278,7 @@ Prabhunagar, Nawabpet Mandal
       </marquee>
     </div>
 
-   <ul>
-  <li>
-    <a class="blinking" href="https://manikprabhubhajan.github.io/HINDI/" target="_blank">
-      👉 1. हिंदी पद 
-    </a>
-  </li>
-  <li>
-    <a class="blinking" href="https://manikprabhubhajan.github.io/TELUGUBHAJAN/" target="_blank">
-      👉 2. తెలుగు భజనలు
-    </a>
-  </li>
-</ul>
-
+ 
     <div style="text-align:center; margin: 50px 0;">
       <span style="color:gold; font-size: 2em;">ॐ</span>
       <hr style="border: none; border-top: 2px solid #fff; width: 60%; margin: 10px auto;">
